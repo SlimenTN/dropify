@@ -195,6 +195,7 @@ $('.dropify').dropify({
         'minHeight': 'The image height is too small ({{ value }}}px min).',
         'maxHeight': 'The image height is too big ({{ value }}px max).',
         'imageFormat': 'The image format is not allowed ({{ value }} only).'
+	'fileExtension': 'The file is not allowed ({{ value }} only).'
     }
 });
 ```
@@ -272,5 +273,8 @@ drEvent.on('dropify.error.maxHeight', function(event, element){
 });
 drEvent.on('dropify.error.imageFormat', function(event, element){
     alert('Image format error message!');
+});
+drEvent.on('dropify.error.fileExtension', function(event, element){
+    alert('File extension error message!');
 });
 ```
